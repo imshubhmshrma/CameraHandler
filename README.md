@@ -7,14 +7,13 @@ First create a button(on click you want the camera and photo library access) and
 and add  
 
 @IBAction func actionImageButtonTapped(_ sender: UIButton) {
-
  print(" 🎦🎬🎬 Button Tapped 🎦🎬🎬") 
  CameraHandler.shared.showActionSheet(vc: self)
  CameraHandler.shared.imagePickedBlock = { (image) in
  print("the image that is picked",image)
- self.imageView.image = image
+ self.imageView.image = image // here imageView in a imageView on which you want to show the image that is being picked up 
   } 
  }
  
  
- // here imageView in a imageView on which you want to show the image that is being picked up 
+ 
